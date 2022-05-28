@@ -1,5 +1,7 @@
 package com.ifce.br.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.ifce.br.model.Anime;
@@ -14,5 +16,9 @@ public class AnimeService {
 	public void cadastrarAnime(Anime anime) {
 		animeRepository.save(anime);
 	}
-	
+	public List<Anime> listarAnimes(){
+		
+		return animeRepository.findAll();
+		
+	}
 }
