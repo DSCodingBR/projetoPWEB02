@@ -30,6 +30,14 @@
 				<td th:text="${anime.categoria}"></td>
 				<td th:text="${anime.status}"></td>
 				<td th:text="${anime.episodios}"></td>
+				<td> <a th:href="@{/anime/excluir/{codigo}(codigo = ${anime.codigo})}"  class="btn btn-danger">  Excluir </a></td>
+				<td> <a th:href="@{/anime/atualizar/{codigo}(codigo = ${anime.codigo})}"  class="btn btn-primary">  Atualizar </a></td>
+				
+				<!--<tr><input  type="submit" value="Cadastrar Novo Anime" action = "/anime/formulario"></tr>-->
+				<tr><a href="/anime/formulario">
+        			<input type="button" value="Cadastrar Novo Anime">
+    			</a></tr>
+				
 			</tr>
    		</tbody>
 	</table>

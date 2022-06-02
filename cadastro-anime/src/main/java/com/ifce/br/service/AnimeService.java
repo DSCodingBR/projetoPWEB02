@@ -21,4 +21,10 @@ public class AnimeService {
 		return animeRepository.findAll();
 		
 	}
+	public void excluirAnime(Long Codigo) {
+		animeRepository.deleteById(Codigo);
+	}
+	public Anime buscarAnimePorId(Long Codigo) {
+		return animeRepository.getOne(Codigo);
+	}
 }
